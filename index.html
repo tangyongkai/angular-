@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>书店</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
     <!--导航条 固定不动不切换-->
@@ -23,11 +23,11 @@
     <div ng-view class="container"></div>
 
     <!--所有js和css都引入到主页即可，单页开发，是将不同的模板嵌入到主页 spa-->
-    <script src="/node_modules/angular/angular.js"></script>
-    <script src="/node_modules/angular-route/angular-route.js"></script>
-    <script src="/node_modules/angular-resource/angular-resource.js"></script>
-    <script src="/node_modules/jquery/dist/jquery.js"></script>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/angular-route/angular-route.js"></script>
+    <script src="./node_modules/angular-resource/angular-resource.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script>
         var app = angular.module('appModule',['ngResource','ngRoute']);
         //配置路由 ,需要用到ngRoute中的服务进行配置 配置时增加大写的Provider
