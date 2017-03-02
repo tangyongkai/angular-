@@ -23,11 +23,11 @@
     <div ng-view class="container"></div>
 
     <!--所有js和css都引入到主页即可，单页开发，是将不同的模板嵌入到主页 spa-->
-    <script src="./node_modules/angular/angular.js"></script>
-    <script src="./node_modules/angular-route/angular-route.js"></script>
-    <script src="./node_modules/angular-resource/angular-resource.js"></script>
-    <script src="./node_modules/jquery/dist/jquery.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-route/angular-route.js"></script>
+    <script src="/node_modules/angular-resource/angular-resource.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script>
         var app = angular.module('appModule',['ngResource','ngRoute']);
         //配置路由 ,需要用到ngRoute中的服务进行配置 配置时增加大写的Provider
@@ -40,16 +40,16 @@
         app.config(function ($routeProvider) {
             //1.路由的路径 2.配置好的路由 当路由切换时会将内容放置到对应的ng-view里
             $routeProvider.when('/',{
-                templateUrl:'./tmpl/home.html',
+                templateUrl:'/tmpl/home.html',
                 controller:'homeCtrl' //控制器上挂载的数据可以在模板中取出来
             }).when('/list',{
-                templateUrl:'./tmpl/list.html',
+                templateUrl:'/tmpl/list.html',
                 controller:'listCtrl'
             }).when('/add',{
-                templateUrl:'./tmpl/add.html',
+                templateUrl:'/tmpl/add.html',
                 controller:'addCtrl'
             }).when('/detail/:id',{ // /detail/2  -> $routeParams {id:2}
-                templateUrl:'./tmpl/detail.html',
+                templateUrl:'/tmpl/detail.html',
                 controller:'detailCtrl'
             }).otherwise('/');
             //配置404路由
